@@ -1,0 +1,10 @@
+---
+- name: Satellite Install
+  hosts:  satellite
+  become: true
+  gather_facts: yes
+  roles:
+    - { role: SM_to_RH, when: connected }
+    - { role: local_repos, when: connected != 'true'}
+    - common
+    - satellite

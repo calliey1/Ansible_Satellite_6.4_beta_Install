@@ -1,0 +1,7 @@
+---
+- name: installing satellite
+  yum:
+    name: satellite
+    disablerepo: "*"
+    enablerepo: "rhel-7-server-rpms,rhel-server-rhscl-7-rpms,rhel-server-7-satellite-6-beta-rpms,rhel-7-server-satellite-maintenance-6-beta-rpms,rhel-7-server-ansible-2.6-rpms"
+    state: present

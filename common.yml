@@ -1,0 +1,7 @@
+---
+- name: Common Installs
+  hosts: common
+  become: true
+  roles:
+    - SM_to_RH
+    - common
